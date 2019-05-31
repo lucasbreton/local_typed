@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Lucas Breton</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+    <script src="lib/typed.js" type="text/javascript"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=|Source+Code+ProNunito:200,300,400,600,700');
+        </style>
+</head>
+<body>
+
+  <p class="lucasbreton">LUCAS BRETON</p>
+
+  <!-- MOBILE NAVIGATION BAR -->
+  <nav id="mobileNav">
+
+      <ul>
+          <li>ABOUT</li>
+          <li>WORK</li>
+          <li>CONTACT</li>
+        </ul>
+  </nav>
+
+
+<!-- NAVIGATION BAR -->
+    <nav id="navbar">
+        <ul>
+          <li>About</li>
+          <li>Work</li>
+          <li class="lastItem">Contact</li>
+        </ul>
+      </nav>
+
+ <!-- HAMBURGER ANIMATION -->
+ <div id="bm"> </div>
+
+
+
+
+  <!-- PROJECT 2 -->
+  <div class="project2">
+
+    <div  class="header">
+    <h1>Maximizing weightlifting training efficiency with data science.</h1>
+    <p class="tag">iOS Prototype</p>
+    <div class="sectionDivider"></div>
+</div>
+
+<div class="overview">
+    <p class="sectionHeading">PROJECT OVERVIEW</p>
+
+    <p class="subheading">Project Timeline</p>
+    <p class="bodyCopy">June 2018 - April 2019</p>
+
+    <p class="subheading">Problem Statement</p>
+    <p class="bodyCopy">This is some sample text that I came up with. It works pretty 
+      ell and it medium sized. This is some sample text that I came up with.
+       It works pretty ell and it medium sized.</p>
+
+       <p class="subheading">Project Goal</p>
+    <p class="bodyCopy">This is some sample text that I came up with. It works pretty 
+      ell and it medium sized. This is some sample text that I came up with.
+       It works pretty ell and it medium sized.</p>
+
+       <div class="jumpTo">
+<p class="jumpToText">JUMP TO SECTION</p>
+<ul>
+    <li>Overview</li>
+    <li class="notItem">Research</li>
+    <li  class="notItem">Ideation</li>
+    <li  class="notItem">Prototyping</li>
+    <li  class="notItem">Evaluation</li>
+    <li  class="notItem">Takeaways</li>
+</ul>
+
+
+       </div>
+
+    </div>
+    </div>
+    
+
+
+<!-- LOTTIE ANIMATIONS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.4.4/lottie.js"></script>
+
+<script>
+
+      var anim = lottie.loadAnimation({
+        container : document.getElementById('bm'),
+        renderer : 'svg',
+        loop: false,
+        autoplay:false,
+        path:'data.json'
+      })
+
+      var bm = document.getElementById('bm');
+bm.addEventListener("click", start);
+
+
+function start(){
+  anim.setSpeed(0.5);
+  var clicked = true;
+  anim.playSegments([30, 37], true);
+  
+  if(clicked = true){
+  bm.addEventListener("click", reverse);
+  }
+}
+
+function reverse(){
+  anim.setSpeed(1);
+  anim.playSegments([60, 66], true);
+bm.removeEventListener("click", reverse);
+  } 
+
+
+// MOBILE NAVIGATION
+bm.addEventListener("click", moveNavDown);
+var mobileNavPosition = document.getElementById('mobileNav').style.top;
+
+function moveNavDown(){
+  document.getElementById('mobileNav').style.top= "0vh";
+  bm.removeEventListener("click", moveNavDown); 
+  bm.addEventListener("click", moveNavUp);
+}
+
+  function moveNavUp(){
+    document.getElementById('mobileNav').style.top= "-100vh";
+    bm.removeEventListener("click", moveNavUp); 
+    bm.addEventListener("click", moveNavDown);
+  }
+
+
+    </script> 
+
+
+</body>
+
+ <!-- LANDING PAGE TYPE -->
+
+<script>
+
+      var typed3 = new Typed('#typed3', {
+    strings: [
+                'My name is Lucas, and I\'m a \<br\>' + '\<span\>UX Designer.'],
+
+    typeSpeed: 30,
+    backSpeed: 60,
+    smartBackspace: true, // this is a default
+    loop: false, 
+  });
+  </script>
+
+
+
+
+
+
+  
+
+
+
+
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Lucas Breton</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+    <script src="lib/typed.js" type="text/javascript"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=|Source+Code+ProNunito:200,300,400,600,700');
+        </style>
+</head>
+<body>
+
+  <p class="lucasbreton">LUCAS BRETON</p>
+
+  <!-- MOBILE NAVIGATION BAR -->
+  <nav id="mobileNav">
+
+      <ul>
+          <li>ABOUT</li>
+          <li>WORK</li>
+          <li>CONTACT</li>
+        </ul>
+  </nav>
+
+
+<!-- NAVIGATION BAR -->
+    <nav id="navbar">
+        <ul>
+          <li>About</li>
+          <li>Work</li>
+          <li class="lastItem">Contact</li>
+        </ul>
+      </nav>
+
+ <!-- HAMBURGER ANIMATION -->
+ <div id="bm"> </div>
+
+
+<!-- LANDING PAGE -->
+    <div class="landingPage">
+      
+
+  <!-- TYPED STRINGS -->
+  <div class="typed-strings-wrapper">
+  <div id="typed-strings"></div>
+  <span id="typed3"></span>
+  </div>
+
+  <h2>Empathyzing and advocating for people is at the very heart of 
+    what I do, and who I am.</h2>
+</div>
+
+<div class="cta"><p><a href="#work" class="workLink">
+  EXPLORE MY DESIGN PROCESS&nbsp;&nbsp;<span class="arrow hvr-hang">↓
+
+  </span></p></a></div>
+
+
+
+<!-- PLACEHOLDER -->
+<div class="placeholder"></div>
+
+<!-- PROJECT 1 -->
+<div class="project1">
+
+
+
+  <!-- ADD OPEN IN NEW TAB LOGO WHERE CTA IS -->
+  <!-- CARD WRAPPER -->
+  <div class="cardWrapper">
+
+    <!-- CARD 1 -->
+    <div class="card">
+<div class="imagePlaceholder"><img src="placeholder.png"></div>
+      <p class="projectTags">
+  iOS Prototype
+</p>
+<p class="projectTitle">Maximizing weightlifting 
+  training efficiency with data science.
+</p>
+<div class="horizontalDivider"></div>
+<p class="cardCta" id="replaceMe">READ CASE STUDY</p>
+<img src="arrow-right.svg" class="arrow-right" draggable="false">
+    </div>
+
+
+
+ 
+  </div>
+  </div>
+
+
+    </div>
+    
+
+
+<!-- LOTTIE ANIMATIONS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.4.4/lottie.js"></script>
+
+<script>
+
+      var anim = lottie.loadAnimation({
+        container : document.getElementById('bm'),
+        renderer : 'svg',
+        loop: false,
+        autoplay:false,
+        path:'data.json'
+      })
+
+      var bm = document.getElementById('bm');
+bm.addEventListener("click", start);
+
+
+function start(){
+  anim.setSpeed(0.5);
+  var clicked = true;
+  anim.playSegments([30, 37], true);
+  
+  if(clicked = true){
+  bm.addEventListener("click", reverse);
+  }
+}
+
+function reverse(){
+  anim.setSpeed(1);
+  anim.playSegments([60, 66], true);
+bm.removeEventListener("click", reverse);
+  } 
+
+
+// MOBILE NAVIGATION
+bm.addEventListener("click", moveNavDown);
+var mobileNavPosition = document.getElementById('mobileNav').style.top;
+
+function moveNavDown(){
+  document.getElementById('mobileNav').style.top= "0vh";
+  bm.removeEventListener("click", moveNavDown); 
+  bm.addEventListener("click", moveNavUp);
+}
+
+  function moveNavUp(){
+    document.getElementById('mobileNav').style.top= "-100vh";
+    bm.removeEventListener("click", moveNavUp); 
+    bm.addEventListener("click", moveNavDown);
+  }
+
+
+    </script> 
+
+
+</body>
+
+ <!-- LANDING PAGE TYPE -->
+
+<script>
+
+      var typed3 = new Typed('#typed3', {
+    strings: [
+                'My name is Lucas, and I\'m a \<br\>' + '\<span\>UX Designer.'],
+
+    typeSpeed: 30,
+    backSpeed: 60,
+    smartBackspace: true, // this is a default
+    loop: false, 
+  });
+  </script>
+
+
+
+
+
+
+  
+
+
+
+
+</html>
